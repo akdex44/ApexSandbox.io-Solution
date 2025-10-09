@@ -1,0 +1,5 @@
+public String evenOrOdd(Integer num) {
+    if(math.mod(num,10)== 2,4,6,8){
+        return evenOrOdd;
+    }
+}

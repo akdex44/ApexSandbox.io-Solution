@@ -6,4 +6,3 @@ Integer i;
     }
     return sum;
 }
-}

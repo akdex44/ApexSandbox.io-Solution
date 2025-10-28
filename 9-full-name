@@ -1,6 +1,5 @@
 public String formatName(String firstName, String lastName) {
-    String v1 = firstName;
-    String v2 = lastName;
-    return v1+v2;
+
+    return firstName + ' '+ lastName;
     
 }

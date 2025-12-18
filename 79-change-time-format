@@ -1,20 +1,20 @@
 public String changeTimeFormat(String strTime) {
-     String[] timeParts = strTime.split(':');
-        Integer hour = Integer.valueOf(timeParts[0]);
-        String minute = timeParts[1];
-        String period;
-
-        if (hour == 0) {
-            hour = 12;
-            period = 'AM';
-        } else if (hour < 12) {
-            period = 'AM';
-        } else if (hour == 12) {
-            period = 'PM';
-        } else {
-            hour -= 12;
-            period = 'PM';
-        }
-
-        return String.valueOf(hour).padLeft(2, '0') + ':' + minute + ' ' + period;
+Integer hrs = Integer.valueOf(strTime.substringbefore(':'));
+    String meridiem = ' AM';
+    String strHrs;
+    if (hrs == 12) meridiem = ' PM';
+    if (hrs > 12) { 
+        meridiem = ' PM';
+        hrs -= 12;
+    }
+    if (hrs == 0) {
+        hrs = 12;       
+    }
+    if(hrs<10){
+        strHrs = '0' + String.valueOf(hrs);
+    }
+    else{
+        strHrs = String.valueOf(hrs);
+    }
+    return strHrs + ':' + strTime.substringafter(':') + meridiem;
 }

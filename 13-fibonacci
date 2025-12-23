@@ -1,20 +1,24 @@
 public Integer fibonacci(Integer n) {
-    if (n <= 0){
-
-    }
-    if (n == 1) || (n == 2){
-           return 1;     
-    } 
-
-    Integer val1 = 1;
-    Integer val2 = 2;
-    Integer current = 0;
-
-    for(Integer i = 3; i <= n; i++){
-        current = val1 + val2;
-        val1 = val2;
-        val2 = current;
+    if (n <= 0) {
+            throw new IllegalArgumentException('Input must be greater than 0');
+        }
         
-    } 
-    return val2;
+        if (n == 1 || n == 2) {
+            return 1;
+        }
+        
+        Integer previous = 1;
+        Integer current = 1;
+        Integer next = 0;
+
+        for (Integer i = 3; i <= n; i++) {
+            next = previous + current; 
+            previous = current; 
+            current = next; 
+        }
+        
+        return current;
+    }
 }
+
+   

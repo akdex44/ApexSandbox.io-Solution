@@ -1,4 +1,7 @@
 public Integer fibonacci(Integer n) {
+    if (n <= o){
+        
+    }
     if (n == 1) || (n == 2){
            return 1;     
     } 

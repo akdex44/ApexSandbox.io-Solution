@@ -1,0 +1,15 @@
+public Integer fibonacci(Integer n) {
+    if ( n == 1) || (n== 2){
+           return 1;     
+    }
+    integer val1 = 1;
+    integer val2 = 2;
+    integer current = o;
+    for(integer i = 3;i<=n;i++){
+        current = val1 + val2;
+        val1 = val2;
+        val2 = current;
+        
+    } 
+    return val2;
+}

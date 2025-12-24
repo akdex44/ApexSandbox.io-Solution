@@ -14,7 +14,7 @@ public Integer fibonacci(Integer n) {
             current = next; 
         }
         
-        return current;
+        return next;
     }
 }
 

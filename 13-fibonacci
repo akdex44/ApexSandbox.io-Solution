@@ -1,9 +1,6 @@
 public Integer fibonacci(Integer n) {
-    if (n <= 0) {
-            throw new IllegalArgumentException('Input must be greater than 0');
-        }
         
-        if (n == 1 || n == 2) {
+        if (n < 1) {
             return 1;
         }
         
@@ -17,7 +14,7 @@ public Integer fibonacci(Integer n) {
             current = next; 
         }
         
-        return next;
+        return current;
     }
 }
 

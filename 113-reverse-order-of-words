@@ -1,0 +1,23 @@
+public String reverseWordsInASentence(String sentence){
+    if (String.isEmpty(sentence)) {
+            return sentence;
+        }
+        
+        // it will Reverse the entire sentence
+        String reversedSentence = sentence.reverse();
+        
+        // this Split the reversed sentence into words
+        List<String> words = new List<String>();
+        for (String word : reversedSentence.split(' ')) {
+            if (!String.isEmpty(word)) {
+                words.add(word);
+            }
+        }
+        
+        // Reverse the order of words
+        words.reverse();
+        
+        // Join the words back into a single string
+        return String.join(words, ' ');
+    }
+}
